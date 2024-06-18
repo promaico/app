@@ -24,11 +24,11 @@ class CustomUserManager(BaseUserManager):
         if not last_name:
             raise ValueError(_("Ein Nachname ist erforderlich"))
         
-        #if email:
-        #    email = self.normalize_email(email)
-        #    self.email_validator(email)
-        #else:
-        #    raise ValueError(_("Benutzer: Eine E-Mail Adresse ist erforderlich"))
+        if email:
+            email = self.normalize_email(email)
+            self.email_validator(email)
+        else:
+            raise ValueError(_("Benutzer: Eine E-Mail Adresse ist erforderlich"))
         
         user = self.model(
             username = username,

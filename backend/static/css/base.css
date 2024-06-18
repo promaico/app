@@ -78,7 +78,10 @@ small ul li{
 
 
 .email_card {
+    margin-top: 15px !important;
     background-color: #cccccc !important;
     border-radius: 15px !important;
-    padding-top: 15px !important;
+    padding: 15px !important;
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.36) !important; 
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.36) !important;
 }

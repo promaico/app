@@ -148,12 +148,20 @@ AUTH_USER_MODEL = "users.User"
 LOGOUT_REDIRECT_URL = "index"
 
 mail = os.environ.get("MAIL")
-mail_pass = os.environ.get("PASS")
+mail_pass = os.environ.get("PASSWORD")
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = mail
-EMAIL_HOST_PASSWORD = mail_pass
+EMAIL_HOST_PASSWORD = "truh esch ozpm qwxv"
 DEFAULT_FROM_EMAIL = mail
+
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+ACCOUNT_SESSION_REMEMBER = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_UNIQUE_EMAIL = True

@@ -13,6 +13,7 @@ class RegistrationForm(UserCreationForm):
         email = self.cleaned_data.get("email")
         if User.objects.filter(email=email).exists():
             raise ValidationError("Es existiert bereits ein Account mit dieser E-Mail Adresse")
+        return email
         
 class CustomUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm):
