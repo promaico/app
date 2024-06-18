@@ -1,0 +1,21 @@
+{% extends "users/base.html" %}
+
+{% block title %}Homepage{% endblock title %}
+
+{% block content %}
+    <h1>
+        Homepage
+    </h1>
+
+
+    {% for messages in messages %}
+        <div class="message {{message.tags}} ">
+            {{message}}
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+    Willkommen {{user.get_full_name}}. 
+    {% endif %}
+        </div>
+    
+{% endblock content %}

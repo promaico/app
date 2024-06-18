@@ -1,0 +1,28 @@
+{% extends "users/base.html" %}
+{% load static %}
+{%load crispy_forms_tags %} 
+
+
+{% block content %}
+
+<h1>
+    Profil von {{user.first_name}} {{user.last_name}}
+</h1>
+
+{% for element in emails %}
+
+    <div class="bg-custom pt-20 email_card">
+        {% for key, value in element.items %}
+            <div class="row email_card">
+                <div class="col-3">
+                    {% if key != "id" %}{{ key }}
+                </div>
+                <div class="col-9">
+                    {{ value }}{% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+{% endblock content %}

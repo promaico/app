@@ -1,0 +1,5 @@
+Hallo, {{user.get_full_name}},
+
+hier ist der Link zur Aktivierung deines Kontos:
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}

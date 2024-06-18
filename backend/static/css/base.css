@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    height: 100% !important;
+}
+
+h1{
+    font-weight: 900 !important;
+    font-size: 40px !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.411) !important;
+
+}
+
+*{
+    font-family: Montserrat !important;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #858585 !important;
+    border: none !important;
+}
+
+.logo{
+    transition: ease-in .1s;
+}
+
+.logo:hover{
+    filter: drop-shadow(3px 3px 1px #000000a8) !important;
+    transform: scale(1.05) !important;
+}
+
+.nav-link, .btn{
+    transition: linear .2s;
+}
+
+.nav-link:hover, .btn:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(1.5px 1.5px 1px #00000056) !important;
+}
+
+.navbar{
+    margin-bottom: 2dvh !important;
+    height: 8dvh !important;
+}
+
+.form{
+    background-color: #e4e4e4;
+    border-radius: 15px;
+    padding: 30px;
+    width: 820px;
+    height: fit-content;
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.36); 
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.36);
+}
+
+small ul li{
+    font-size: 14px !important;
+}
+
+.form_container{
+    height: fit-content !important;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.bg-custom{
+    background-color: #e4e4e4 !important ;
+}
+
+.btn_container{
+    display: flex!important;
+    flex-direction: column-reverse!important;
+    
+    
+}
+
+
+.email_card {
+    background-color: #cccccc !important;
+    border-radius: 15px !important;
+    padding-top: 15px !important;
+}

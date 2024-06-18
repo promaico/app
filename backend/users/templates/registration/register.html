@@ -1,0 +1,53 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %} 
+{% load static %}
+{% block title %}
+    Registrierung
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="form_container">
+    <div class="form">
+        <form action=" {%url "register" %}" method="post">
+            {% csrf_token %}
+
+
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.username|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.password1|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.password2|as_crispy_field }}
+                    </div>
+                </div><div class="row">
+                    <div class="col-6">
+                        {{ form.email_password|as_crispy_field }}
+                    </div>
+                    <div class="btn_container col-6 ">
+                        <button type="submit" class="register btn btn-primary">Registrieren</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock content %}
